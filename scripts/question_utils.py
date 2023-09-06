@@ -57,7 +57,7 @@ def get_answered_questions(question_list: List[List[bytes]]) -> list:
             if b'</summary>' in i:
                 index = q.index(i)
 
-        if q[index+1: len(q) - 1]:
+        if q[index + 1 : -1]:
             t.append(q)
 
     return t
