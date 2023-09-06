@@ -50,8 +50,7 @@ def pretty_json(arg):
 
 
 def create_test_app():
-    app = Flask(__name__)
-    return app
+    return Flask(__name__)
 
 
 if __name__ == "__main__":

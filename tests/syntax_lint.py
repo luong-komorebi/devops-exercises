@@ -72,9 +72,7 @@ def check_details_tag(file_list):
     error = False
     err_message = ''
     for line_number, line in enumerate(file_list):
-        if b'<details>' in line and b'</details>' in line:
-            pass
-        else:
+        if b'<details>' not in line or b'</details>' not in line:
             if b'<details>' in line and after_detail:
                 err_message = f'Missing closing detail tag round line {line_number - 1}'
                 error = True
@@ -109,9 +107,7 @@ def check_summary_tag(file_list):
     error = False
     err_message = ''
     for line_number, line in enumerate(file_list):
-        if b'<summary>' in line and b'</summary>' in line:
-            pass
-        else:
+        if b'<summary>' not in line or b'</summary>' not in line:
             if b'<summary>' in line and after_summary:
                 err_message = f'Missing closing summary tag around line {line_number}'
                 error = True

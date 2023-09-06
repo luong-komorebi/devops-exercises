@@ -23,6 +23,6 @@ def binary_search(arr: List[int], lb: int, ub: int, target: int) -> int:
 if __name__ == '__main__':
     rand_num_li: List[int] = sorted([random.randint(1, 50) for _ in range(10)])
     target: int = random.randint(1, 50)
-    print("List: {}\nTarget: {}\nIndex: {}".format(
-        rand_num_li, target,
-        binary_search(rand_num_li, 0, len(rand_num_li) - 1, target)))
+    print(
+        f"List: {rand_num_li}\nTarget: {target}\nIndex: {binary_search(rand_num_li, 0, len(rand_num_li) - 1, target)}"
+    )
